@@ -22,11 +22,11 @@ const MainVip = () => {
   return (
     <main className="mx-0 mt-16 mb-10 md:my-auto lg:mt-0 xl:mt-0">
       <h1 className="gradH1 px-4 pt-4 text-center font-roboto text-3xl font-bold text-white md:px-0 md:pt-8 md:text-4xl">
-        EU VIP
+        EU x10 VIP
       </h1>
 
       {/* <!-- Vip container --> */}
-      <div className="vipContainer mx-auto mt-12 mb-16 flex max-w-[1400px] flex-col items-center justify-center gap-5 px-4 sm:flex-row sm:flex-wrap md:gap-8">
+      <div className="vipContainer mx-auto mt-12 mb-16 flex max-w-[1400px] flex-col items-center justify-center gap-5 px-4 sm:flex-row sm:flex-wrap md:gap-8 md:mt-20">
         {vipData.map((vip) => (
           <CardVip key={vip.id} vip={vip} />
         ))}
