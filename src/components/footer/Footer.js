@@ -1,5 +1,6 @@
 import React from "react";
-import logoFooter from "../../assets/ressources/logo_awake/SVG/logo1.svg"
+import { Link } from "react-router-dom";
+import logoFooter from "../../assets/ressources/logo_awake/SVG/logo1.svg";
 
 const Footer = () => {
   return (
@@ -15,31 +16,32 @@ const Footer = () => {
         <div className="flex w-1/2 justify-center sm:flex-none sm:self-center">
           <ul className="flex flex-col justify-center sm:flex-row">
             <li className="px-4 py-2 font-medium">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="flex items-center md:text-lg md:hover:text-white"
               >
                 <i className="fa-brands fa-discord fa-xl mr-2 text-[#5865F2]"></i>
                 Discord
-              </a>
+              </Link>
             </li>
             <li className="px-4 py-2 font-medium">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="flex items-center md:text-lg md:hover:text-white"
               >
                 <i className="fa-brands fa-twitter fa-xl mr-2 text-[#1DA1F2]"></i>
                 Twitter
-              </a>
+              </Link>
             </li>
             <li className="px-4 py-2 font-medium">
-              <a
-                href="https://steamcommunity.com/groups/awakerust"
+              <Link
+                to="/"
                 className="flex items-center md:text-lg md:hover:text-white"
                 target="_blank"
               >
-                <i className="fa-brands fa-steam fa-xl mr-2 text-black"></i>Steam
-              </a>
+                <i className="fa-brands fa-steam fa-xl mr-2 text-black"></i>
+                Steam
+              </Link>
             </li>
           </ul>
         </div>

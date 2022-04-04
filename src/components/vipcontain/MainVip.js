@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CardVip from "./CardVip";
 
-
 const MainVip = () => {
   const [vipData, setVipData] = useState([]);
 
@@ -15,7 +14,6 @@ const MainVip = () => {
         },
       })
       .then((res) => {
-        console.log(res);
         setVipData(res.data);
       })
       .catch((err) => console.log(err));
