@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import ModalVip from "./ModalVip";
 
 const CardVip = ({ vip }) => {
-
   const [toggle, setToggle] = useState(false);
 
   const displayModal = () => {
     setToggle(!toggle);
+    if(!toggle){
+      document.body.classList.add("overflow-y-hidden")
+    }else {
+      document.body.classList.remove("overflow-y-hidden")
+    }
   };
 
   return (

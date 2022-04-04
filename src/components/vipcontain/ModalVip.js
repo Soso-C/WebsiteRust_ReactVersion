@@ -5,7 +5,7 @@ const ModalVip = ({ vip, toggle }) => {
 
   return (
     <>
-      <div id="overlay"></div>
+      <div id="overlay" onClick={toggle}></div>
       <div id="modal" className="font-medium space-y-4">
         <p className="pt-2">Name: {vip.title} </p>
         <p>Test: {vip.title}</p>
