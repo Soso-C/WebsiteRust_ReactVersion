@@ -4,6 +4,7 @@ import ModalVip from "./ModalVip";
 const CardVip = ({ vip }) => {
   const [toggle, setToggle] = useState(false);
 
+  // Toggle modal 
   const displayModal = () => {
     setToggle(!toggle);
     if(!toggle){

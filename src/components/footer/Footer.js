@@ -35,9 +35,7 @@ const Footer = () => {
             </li>
             <li className="px-4 py-2 font-medium">
               <Link
-                to="/"
-                className="flex items-center md:text-lg md:hover:text-white"
-                target="_blank"
+               to={{ pathname: "https://www.youtube.com/" }} target="_blank" 
               >
                 <i className="fa-brands fa-steam fa-xl mr-2 text-black"></i>
                 Steam

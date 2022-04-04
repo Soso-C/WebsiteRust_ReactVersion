@@ -5,6 +5,7 @@ import CardVip from "./CardVip";
 const MainVip = () => {
   const [vipData, setVipData] = useState([]);
 
+  // fetch json file and stock data in state
   useEffect(() => {
     axios
       .get("./data/datavip.json", {
