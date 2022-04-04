@@ -33,7 +33,7 @@
       "Spawn with 70 HP",
       "One additional home (3 homes total)",
       "18 seconds teleportation timer",
-      "Bed cooldown (80s) -- Bag cooldown (90s)",
+      "Bed cooldown (80s) - Bag cooldown (90s)",
       "8 RP per hour",
       "Access to skinbox | /skin"
     ]
@@ -74,7 +74,7 @@
       "Spawn with 75 HP",
       "Two additional home (4 homes total)",
       "16 seconds teleportation timer",
-      "Bed cooldown (75s) -- Bag cooldown (80s)",
+      "Bed cooldown (75s) - Bag cooldown (80s)",
       "10 RP per hour",
       "BGrade levels | 1 - 2",
       "Access to skinbox | /skin"
@@ -189,7 +189,7 @@
     "dailyKit": [
       "Metal Gearset (Chestplate/Facemask/Roadsign Kilt)",
       "Clothing (Hoodie/Pants/Boots/Tact Gloves)",
-      "Jackhammer/Chainsaw + 100 Low Grade Fuel",
+      "Jackhammer/Chainsaw + 100 LowGrade Fuel",
       "15 Medical Syringes",
       "Assault Rifle + 256 Rifle Ammo",
       "LR300 + 256 Rifle Ammo",

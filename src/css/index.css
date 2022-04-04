@@ -235,7 +235,7 @@
   height: auto;
   max-width: 1400px;
   min-width: 300px;
-  width: 750px;
+  /* width: 750px; */
   padding: 15px;
   border-radius: 10px;
   position: fixed;
