@@ -255,13 +255,13 @@
     "title": "AIRDROP",
     "price": 24.99,
     "phrase": "You can redeem 10 Airdrops once per wipe for 30 days",
-    "globalKit": ["10 Supply AirDrop"]
+    "globalKit": ["10 Supply AirDrop once per wipe for 30 days"]
   },
   {
     "id": 9,
     "title": "SKINBOX",
     "price": 5.99,
     "phrase": "Purchasing this product will give you 30 days",
-    "globalKit": ["Access to skinbox | /skin"]
+    "globalKit": ["Access to skinbox | /skin for 30 days"]
   }
 ]
