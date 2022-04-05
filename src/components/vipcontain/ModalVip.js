@@ -8,7 +8,7 @@ const ModalVip = ({ vip, toggle }) => {
         <div id="overlay" onClick={toggle}></div>
         <div
           id="modal"
-          className="bg-white dark:bg-gray-800 overflow-auto w-[90%] lg:w-[750px] xl:w-[850px]"
+          className="bg-white dark:bg-gray-800 h-[75vh] overflow-auto w-[90%] md:h-auto lg:w-[750px] xl:w-[850px]"
         >
           <div className="bg-white dark:bg-gray-800 pb-2 px-2 sm:px-4 md:px-6 lg:flex-shrink-1 lg:px-8 lg: pt-2">
             <h3 className="text-2xl font-hurricane uppercase leading-8 font-extrabold text-gray-900 text-center sm:text-3xl sm:leading-9 gradH1 md:text-4xl lg:pb-4">
@@ -142,7 +142,7 @@ const ModalVip = ({ vip, toggle }) => {
         <div id="overlay" onClick={toggle}></div>
         <div
           id="modal"
-          className="bg-white dark:bg-gray-800 overflow-auto w-[90%] lg:w-[750px] xl:w-[850px]"
+          className="bg-white dark:bg-gray-800 overflow-auto w-[90%] lg:w-[750px]"
         >
           <div className="bg-white dark:bg-gray-800 pb-2 px-2 sm:px-4 md:px-6 lg:flex-shrink-1 lg:px-8 lg: pt-2">
             <h3 className="text-2xl font-hurricane uppercase leading-8 font-extrabold text-gray-900 text-center sm:text-3xl sm:leading-9 gradH1 md:text-4xl lg:pb-4">
