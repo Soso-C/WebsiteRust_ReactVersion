@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import logoMain from "../../assets/ressources/logo_awake/SVG/logo5.svg";
+import logoMainResponsive from "../../assets/ressources/logo_awake/SVG/logo2.svg";
 import logoMenuBurger from "../../assets/ressources/menu.svg";
 
 const Navbar = () => {
@@ -17,9 +18,10 @@ const Navbar = () => {
         {/* <!-- Logo --> */}
 
         <div className="flex items-center justify-between md:justify-center">
-          <Link to="/">
-            <img src={logoMain} alt="logo awakeRust" className="w-16" />
-          </Link>
+          <NavLink to="/">
+            <img src={logoMain} alt="logo awakeRust" className="w-16 hidden md:block" />
+            <img src={logoMainResponsive} alt="logo awakeRust" className="w-16 md:hidden" />
+          </NavLink>
 
           {/* <!-- Burger menu icon --> */}
 
@@ -34,29 +36,29 @@ const Navbar = () => {
         {/* <!-- List link navbar --> */}
         <ul className="toggle-menu flex hidden flex-col bg-gray-50 px-1 pt-6 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-6 md:bg-transparent md:pt-0 lg:space-x-10">
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <Link to="/" className="text-lg font-medium text-white">
+            <NavLink to="/" className="text-lg font-medium text-white">
               <i className="fa-solid fa-house mr-2 text-white"></i>Home
-            </Link>
+            </NavLink>
           </li>
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <Link to="/" className="text-lg font-medium text-white">
+            <NavLink to="/" className="text-lg font-medium text-white">
               <i className="fa-solid fa-server mr-2 text-white"></i>Servers
-            </Link>
+            </NavLink>
           </li>
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <Link to="/vip" className="text-lg font-medium text-white">
+            <NavLink to="/vip" className="text-lg font-medium text-white">
               <i className="fa-solid fa-crown mr-2 text-white"></i>Vip
-            </Link>
+            </NavLink>
           </li>
           <li className="border-t border-gray-200 py-2 text-center md:border-0">
-            <Link to="/" className="text-lg font-medium text-white">
+            <NavLink to="/" className="text-lg font-medium text-white">
               <i className="fa-solid fa-star text-white"></i> Ranks
-            </Link>
+            </NavLink>
           </li>
           <li className="group border-t border-b border-gray-200 py-2 text-center md:border-0">
-            <Link to="/" className="text-lg font-medium text-white">
+            <NavLink to="/" className="text-lg font-medium text-white">
               <i className="fa-solid fa-bag-shopping mr-2 text-white"></i>Store
-            </Link>
+            </NavLink>
           </li>
         </ul>
         {/* <!-- Btn Link Account --> */}

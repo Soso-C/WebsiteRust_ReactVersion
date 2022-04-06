@@ -6,7 +6,6 @@ import VipPage from "./components/vipcontain/VipPage";
 
 function App() {
   return (
-    <div>
       <Router>
         <Navbar />
         <Routes>
@@ -15,7 +14,6 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </div>
   );
 }
 

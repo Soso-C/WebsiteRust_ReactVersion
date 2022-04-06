@@ -24,7 +24,7 @@ const CardVip = ({ vip }) => {
         </div>
         <div className="text-white bgCardFooter rounded-b-lg h-[180px]">
           <h4 className="text-xl text-center font-bold pt-4 pb-4 text-black">
-            {vip.price}€ 💸
+            {vip.price}€ 
           </h4>
           <p className="text-center px-4 font-medium text-sky-800">
             {`${vip.phrase} of access !`}

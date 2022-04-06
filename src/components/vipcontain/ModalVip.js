@@ -3,7 +3,6 @@ import React from "react";
 const ModalVip = ({ vip, toggle }) => {
   if (vip.id < 6) {
     return (
-      //   Scroll a revoir et navbar pos fixed qui fou le bordel
       <>
         <div id="overlay" onClick={toggle}></div>
         <div
@@ -158,7 +157,7 @@ const ModalVip = ({ vip, toggle }) => {
                 </h4>
                 <div className="flex-1 border-t-2 border-gray-200"></div>
               </div>
-              {/* Map all globalKit in <p> */}
+              {/* Map all globalKit  */}
               <ul className="mt-6 sm:grid sm:grid-cols-2 lg:col-gap-8 lg:row-gap-5 font-medium text-center">
                 {vip.globalKit.map((para) => (
                   <li className="flex items-start lg:col-span-1">
