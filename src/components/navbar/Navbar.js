@@ -18,15 +18,15 @@ const Navbar = () => {
         {/* <!-- Logo --> */}
 
         <div className="flex items-center justify-between md:justify-center">
-          <NavLink to="/">
+          <Link to="/">
             <img src={logoMain} alt="logo awakeRust" className="w-16 hidden md:block" />
             <img src={logoMainResponsive} alt="logo awakeRust" className="w-16 md:hidden" />
-          </NavLink>
+          </Link>
 
           {/* <!-- Burger menu icon --> */}
 
           <button
-            className="icone-toggle inline-flex items-center justify-center rounded-md bg-white p-2 ring-1 ring-black ring-opacity-20 md:hidden"
+            className="inline-flex items-center justify-center rounded-md bg-white p-2 ring-1 ring-black ring-opacity-20 md:hidden"
             onClick={toggleNav}
           >
             <img src={logoMenuBurger} alt="icone burger" className="h-6 w-6" />
@@ -36,28 +36,28 @@ const Navbar = () => {
         {/* <!-- List link navbar --> */}
         <ul className="toggle-menu flex hidden flex-col bg-gray-50 px-1 pt-6 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-6 md:bg-transparent md:pt-0 lg:space-x-10">
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/" className="text-lg font-medium text-white">
-              <i className="fa-solid fa-house mr-2 text-white"></i>Home
+            <NavLink to="/" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-blue-500">
+              <i className="fa-solid fa-house mr-2 md:text-white group-hover:text-blue-500"></i>Home
             </NavLink>
           </li>
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/" className="text-lg font-medium text-white">
-              <i className="fa-solid fa-server mr-2 text-white"></i>Servers
+            <NavLink to="/servers" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-blue-500">
+              <i className="fa-solid fa-server mr-2 md:text-white group-hover:text-blue-500"></i>Servers
             </NavLink>
           </li>
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/vip" className="text-lg font-medium text-white">
-              <i className="fa-solid fa-crown mr-2 text-white"></i>Vip
+            <NavLink to="/vip" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-blue-500">
+              <i className="fa-solid fa-crown mr-2 md:text-white group-hover:text-blue-500"></i>Vip
             </NavLink>
           </li>
-          <li className="border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/" className="text-lg font-medium text-white">
-              <i className="fa-solid fa-star text-white"></i> Ranks
+          <li className="group border-t border-gray-200 py-2 text-center md:border-0">
+            <NavLink to="/ranks" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-blue-500">
+              <i className="fa-solid fa-star md:text-white group-hover:text-blue-500"></i> Ranks
             </NavLink>
           </li>
           <li className="group border-t border-b border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/" className="text-lg font-medium text-white">
-              <i className="fa-solid fa-bag-shopping mr-2 text-white"></i>Store
+            <NavLink to="/store" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-blue-500">
+              <i className="fa-solid fa-bag-shopping mr-2 md:text-white group-hover:text-blue-500"></i>Store
             </NavLink>
           </li>
         </ul>
