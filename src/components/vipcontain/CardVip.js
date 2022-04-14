@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ModalVip from "./ModalVip";
 
-const CardVip = ({ vip }) => {
+
+const CardVip = ({ vip, paramid }) => {
   const [toggle, setToggle] = useState(false);
 
   // Toggle modal 
@@ -43,7 +44,7 @@ const CardVip = ({ vip }) => {
           </div>
         </div>
       </div>
-      {toggle ? <ModalVip vip={vip} toggle={displayModal} /> : <></>}
+      {toggle ? <ModalVip vip={vip} toggle={displayModal} paramid={paramid} /> : <></>}
     </>
   );
 };

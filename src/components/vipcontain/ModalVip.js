@@ -1,7 +1,10 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
-const ModalVip = ({ vip, toggle }) => {
-  if (vip.id < 6) {
+const ModalVip = ({ vip, toggle, paramid }) => {
+  
+  // Si mon parametre id = a x10 et que mon vip.id < 6 car 7-8-9 sont des kits alors on affiche les ressources etc ...
+  if ((paramid.id === "x10") & (vip.id < 6)) {
     return (
       <>
         <div id="overlay" onClick={toggle}></div>
@@ -11,11 +14,14 @@ const ModalVip = ({ vip, toggle }) => {
         >
           <div className="bg-white dark:bg-gray-800 pb-2 px-2 sm:px-4 md:px-6 lg:flex-shrink-1 lg:px-8 lg: pt-2">
             <h3 className="text-2xl font-hurricane uppercase leading-8 font-extrabold text-gray-900 text-center sm:text-3xl sm:leading-9 gradH1 md:text-4xl lg:pb-4">
-              {`${vip.title} Kit x10`}
+              {`${vip.title} KIT ${paramid.id.toUpperCase()}`}
             </h3>
             {/* Map all globalKit in <p> */}
             {vip.globalKit.map((para) => (
-              <p className="font-bold text-center text-gray-500 dark:text-gray-100">
+              <p
+                key={uuidv4()}
+                className="font-bold text-center text-gray-500 dark:text-gray-100"
+              >
                 {para}
               </p>
             ))}
@@ -109,7 +115,7 @@ const ModalVip = ({ vip, toggle }) => {
               {/* List Daily vip */}
               <ul className="mt-6 sm:grid sm:grid-cols-2 lg:col-gap-8 lg:row-gap-5 font-medium text-center">
                 {vip.dailyKit.map((daily) => (
-                  <li className="flex items-start lg:col-span-1">
+                  <li key={uuidv4()} className="flex items-start lg:col-span-1">
                     <div className="flex-shrink-0"></div>
                     <p className="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
                       ✔️ {daily}
@@ -134,7 +140,7 @@ const ModalVip = ({ vip, toggle }) => {
       </>
     );
   }
-  // Si c'est un kit et non un vip alors
+  // Si c'est un kit ou un servx2 alors
   else {
     return (
       <>
@@ -145,7 +151,7 @@ const ModalVip = ({ vip, toggle }) => {
         >
           <div className="bg-white dark:bg-gray-800 pb-2 px-2 sm:px-4 md:px-6 lg:flex-shrink-1 lg:px-8 lg: pt-2">
             <h3 className="text-2xl font-hurricane uppercase leading-8 font-extrabold text-gray-900 text-center sm:text-3xl sm:leading-9 gradH1 md:text-4xl lg:pb-4">
-              {`${vip.title} Kit x10`}
+              {`${vip.title} KIT ${paramid.id.toUpperCase()}`}
             </h3>
             <p className="font-bold text-center text-red-500 dark:text-red-500">
               {vip.phrase} access of this kit
@@ -160,7 +166,7 @@ const ModalVip = ({ vip, toggle }) => {
               {/* Map all globalKit  */}
               <ul className="mt-6 sm:grid sm:grid-cols-2 lg:col-gap-8 lg:row-gap-5 font-medium text-center">
                 {vip.globalKit.map((para) => (
-                  <li className="flex items-start lg:col-span-1">
+                  <li key={uuidv4()} className="flex items-start lg:col-span-1">
                     <div className="flex-shrink-0"></div>
                     <p className="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
                       ✔️ {para}

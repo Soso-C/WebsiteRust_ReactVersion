@@ -1,3 +1,4 @@
+export const vipx10 =
 [
   {
     "id": 1,

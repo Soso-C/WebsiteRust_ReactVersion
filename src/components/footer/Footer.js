@@ -4,11 +4,12 @@ import logoFooter from "../../assets/ressources/logo_awake/SVG/logo1.svg";
 
 const Footer = () => {
   return (
-    <footer className="bgFooter mx-auto mt-auto w-full">
+    <footer className="bgFooter mx-auto mt-auto w-full z-40">
       {/* <!-- Container Footer --> */}
       <div className="mx-auto flex max-w-7xl sm:p-2">
         {/* <!-- Bloc1 Footer --> */}
-        <div className="my-6 w-1/2 p-4">
+        {/* my-6 de base */}
+        <div className="my-4 w-1/2 p-4">
           <img src={logoFooter} alt="" className="w-16" />
           <p className="pt-4 font-medium">Awake Rust ©2022</p>
         </div>

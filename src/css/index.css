@@ -6,7 +6,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Hurricane&display=swap");
 
-
 /*********************************************** ******************************************************/
 html,
 body,
@@ -263,9 +262,34 @@ body,
 }
 
 @media screen and (max-width: 767px) {
-  .active{
+  .active {
     padding-bottom: 0;
     border-bottom: none;
+  }
+}
+
+.imageOverlay {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/**************************** Animation CSS *****************************************/
+
+#modal {
+  animation: apparition 0.3s ease-out;
+}
+
+@keyframes apparition {
+  from{
+    opacity: 0;
+    top: 10%;
+  }
+  to{
+    opacity: 1;
+    top: 50%; 
   }
 }
 
