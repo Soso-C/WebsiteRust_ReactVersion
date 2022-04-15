@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        menu: "100px 1fr 160px",
+        menu: "160px 1fr 160px",
         footerGrid: "1fr 1fr 1fr",
       },
       fontFamily: {

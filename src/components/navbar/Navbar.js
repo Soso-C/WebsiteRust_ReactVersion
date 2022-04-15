@@ -6,9 +6,19 @@ import logoMenuBurger from "../../assets/ressources/menu.svg";
 import Dropdown from "./Dropdown";
 
 const Navbar = () => {
+
+  // Toggle navbar burgermenu for mobile
   const toggleNav = () => {
     const menuEltToggle = document.querySelectorAll(".toggle-menu");
     menuEltToggle.forEach((el) => el.classList.toggle("hidden"));
+  };
+
+  // It's for mobile when user click on navbar links for close this one 
+  const closeNav = () => {
+    const menuEltToggle = document.querySelectorAll(".toggle-menu");
+    if (menuEltToggle.classList !== "hidden") {
+      menuEltToggle.forEach((el) => el.classList.add("hidden"));
+    }
   };
 
   return (
@@ -20,8 +30,16 @@ const Navbar = () => {
 
         <div className="flex items-center justify-between md:justify-center">
           <Link to="/">
-            <img src={logoMain} alt="logo awakeRust" className="w-16 hidden md:block" />
-            <img src={logoMainResponsive} alt="logo awakeRust" className="w-16 md:hidden" />
+            <img
+              src={logoMain}
+              alt="logo awakeRust"
+              className="w-20 hidden md:block"
+            />
+            <img
+              src={logoMainResponsive}
+              alt="logo awakeRust"
+              className="w-16 md:hidden"
+            />
           </Link>
 
           {/* <!-- Burger menu icon --> */}
@@ -37,28 +55,48 @@ const Navbar = () => {
         {/* <!-- List link navbar --> */}
         <ul className="toggle-menu flex hidden flex-col bg-gray-50 px-1 pt-6 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-6 md:bg-transparent md:pt-0 lg:space-x-10">
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200">
-              <i className="fa-solid fa-house mr-2 md:text-white group-hover:text-gray-200"></i>Home
+            <NavLink
+              onClick={closeNav}
+              to="/"
+              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+            >
+              <i className="fa-solid fa-house mr-2 md:text-white group-hover:text-gray-200"></i>
+              Home
             </NavLink>
           </li>
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/servers" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200">
-              <i className="fa-solid fa-server mr-2 md:text-white group-hover:text-gray-200"></i>Servers
+            <NavLink
+              onClick={closeNav}
+              to="/servers"
+              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+            >
+              <i className="fa-solid fa-server mr-2 md:text-white group-hover:text-gray-200"></i>
+              Servers
             </NavLink>
           </li>
           <li className="border-t border-gray-200 py-2 text-center md:border-0">
             <span className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200">
-               <Dropdown />
+              <Dropdown />
             </span>
           </li>
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/ranks" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200">
-              <i className="fa-solid fa-star md:text-white group-hover:text-gray-200"></i> Ranks
+            <NavLink
+              onClick={closeNav}
+              to="/ranks"
+              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+            >
+              <i className="fa-solid fa-star md:text-white group-hover:text-gray-200"></i>{" "}
+              Ranks
             </NavLink>
           </li>
           <li className="group border-t border-b border-gray-200 py-2 text-center md:border-0">
-            <NavLink to="/store" className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200">
-              <i className="fa-solid fa-bag-shopping mr-2 md:text-white group-hover:text-gray-200"></i>Store
+            <NavLink
+              onClick={closeNav}
+              to="/store"
+              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+            >
+              <i className="fa-solid fa-bag-shopping mr-2 md:text-white group-hover:text-gray-200"></i>
+              Store
             </NavLink>
           </li>
         </ul>
