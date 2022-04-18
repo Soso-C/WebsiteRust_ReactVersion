@@ -143,7 +143,7 @@ export const vipx10 =
       "cloth": 8000
     },
     "dailyKit": [
-      "Metal Gearset (Chestplate/Facemask/Roadsign Kilt)",
+      "Full Metal Gearset",
       "Clothing (Hoodie/Pants/Boots/Tact Gloves)",
       "Salvaged Ice Pickaxe/Axe",
       "8 Medical Syringes",
@@ -188,7 +188,7 @@ export const vipx10 =
       "cloth": 16000
     },
     "dailyKit": [
-      "Metal Gearset (Chestplate/Facemask/Roadsign Kilt)",
+      "Full Metal Gearset",
       "Clothing (Hoodie/Pants/Boots/Tact Gloves)",
       "Jackhammer/Chainsaw + 100 LowGrade Fuel",
       "15 Medical Syringes",

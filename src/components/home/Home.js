@@ -1,20 +1,26 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import bgRust from "../../assets/ressources/rustBG.jpg";
+import ImageBackground from "../imageBackground/ImageBackground";
 
 const Home = () => {
   const [serverx10, setServerx10] = useState([]);
+  const [serverx2, setServerx2] = useState([]);
 
   // get Data x10
-  useEffect(() => {
-    axios
-      .get("https://api.battlemetrics.com/servers/14668224")
+  const getData = async () => {
+    await axios
+      .get(process.env.REACT_APP_GET_SERVERX2_INFO)
       .then((res) => setServerx10(res.data.data.attributes));
-      console.log(serverx10);     
+  };
+
+  useEffect(() => {
+    getData();
   }, []);
 
   return (
     <section>
+      {/* Button bottom page server info/connect  */}
+
       <div className="flex mt-4 p-1 md:mt-20 items-center justify-center space-x-4 md:space-x-8 w-full z-50 absolute bottom-[10px]">
         <div className="w-1/2 sm:w-[300px] h-full p-3 bg-[#232323] rounded-lg items-center flex flex-col justify-center shadow-lg opacity-[0.95] ring-white ring-1">
           <p className="text-center font-extrabold text-slate-400">
@@ -35,11 +41,10 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <img
-        src={bgRust}
-        alt=""
-        className="absolute top-0 h-screen w-screen object-cover"
-      />
+
+      <ImageBackground />
+
+      {/* Main page */}
       <div className="mx-auto fixed top-[35%] xl:top-[40%] left-1/2 -translate-x-1/2">
         <h1 className="text-center text-white text-7xl font-bold font-hurricane z-30">
           Welcome to Awake Rust

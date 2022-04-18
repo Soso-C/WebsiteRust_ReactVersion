@@ -2,7 +2,6 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const ModalVip = ({ vip, toggle, paramid }) => {
-  
   // Si mon parametre id = a x10 et que mon vip.id < 6 car 7-8-9 sont des kits alors on affiche les ressources etc ...
   if ((paramid.id === "x10") & (vip.id < 6)) {
     return (
@@ -37,74 +36,21 @@ const ModalVip = ({ vip, toggle, paramid }) => {
               </div>
               {/* List Vip Ressources */}
               <ul className="mt-6 sm:grid sm:grid-cols-2 lg:col-gap-8 lg:row-gap-5 font-medium text-center">
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.wood} Wood
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.stone} Stone
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.metal} Metal
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.hq} HQ
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.sulfur} Sulfur
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.sulfurOre} Sulfur Ore
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.hqOre} HQ Ore
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.metalOre} Metal Ore
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.leather} Leather
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.lowgrade} Low Grade
-                  </p>
-                </li>
-                <li className="flex items-start lg:col-span-1">
-                  <div className="flex-shrink-0"></div>
-                  <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                    ✔️ {vip.ressources.cloth} Cloth
-                  </p>
-                </li>
+                {/* Map all Vip Ressources Object return nbr ressource + name ressource and first letter is uppercase  */}
+                {Object.entries(vip.ressources).map(([kname, el]) => (
+                  <li key={uuidv4()} className="flex items-start lg:col-span-1">
+                    <div className="flex-shrink-0"></div>
+                    <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
+                      ✔️{" "}
+                      {`${el} ${kname.charAt(0).toUpperCase()}${kname.slice(
+                        1
+                      )}`}
+                    </p>
+                  </li>
+                ))}
               </ul>
             </div>
+            {/* 2nd Partie */}
             <div className="mt-6">
               <div className="flex items-center">
                 <h4 className="flex-shrink-0 pr-4 bg-white text-sm dark:bg-gray-800 leading-5 tracking-wider font-semibold uppercase text-indigo-600">
@@ -118,7 +64,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
                   <li key={uuidv4()} className="flex items-start lg:col-span-1">
                     <div className="flex-shrink-0"></div>
                     <p className="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
-                      ✔️ {daily}
+                      {`✔️ ${daily}`}
                     </p>
                   </li>
                 ))}
@@ -133,7 +79,13 @@ const ModalVip = ({ vip, toggle, paramid }) => {
           </div>
           <div className="flex justify-center">
             <button className="mt-4 text-center ml-4 p-2 w-36 rounded-md bg-blue-500 text-white font-bold hover:bg-blue-300">
-              Buy {vip.price}€
+              <a
+                href="https://store.awakerust.com/category/eu-x10-main"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Buy {vip.price}€
+              </a>
             </button>
           </div>
         </div>

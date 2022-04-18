@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import ModalVip from "./ModalVip";
 
-
 const CardVip = ({ vip, paramid }) => {
   const [toggle, setToggle] = useState(false);
 
-  // Toggle modal 
+  // Toggle modal
   const displayModal = () => {
     setToggle(!toggle);
-    if(!toggle){
-      document.body.classList.add("overflow-y-hidden")
-    }else {
-      document.body.classList.remove("overflow-y-hidden")
+    if (!toggle) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
     }
   };
 
@@ -25,7 +24,7 @@ const CardVip = ({ vip, paramid }) => {
         </div>
         <div className="text-white bgCardFooter rounded-b-lg h-[180px]">
           <h4 className="text-xl text-center font-bold pt-4 pb-4 text-black">
-            {vip.price}€ 
+            {vip.price}€
           </h4>
           <p className="text-center px-4 font-medium text-sky-800">
             {`${vip.phrase} of access !`}
@@ -39,12 +38,22 @@ const CardVip = ({ vip, paramid }) => {
               More...
             </button>
             <button className="mt-4 p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200">
-              Buy Vip ⭐
+              <a
+                href="https://store.awakerust.com/category/eu-x10-main"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Buy Vip ⭐
+              </a>
             </button>
           </div>
         </div>
       </div>
-      {toggle ? <ModalVip vip={vip} toggle={displayModal} paramid={paramid} /> : <></>}
+      {toggle ? (
+        <ModalVip vip={vip} toggle={displayModal} paramid={paramid} />
+      ) : (
+        <></>
+      )}
     </>
   );
 };

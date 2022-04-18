@@ -13,7 +13,7 @@ const Navbar = () => {
     menuEltToggle.forEach((el) => el.classList.toggle("hidden"));
   };
 
-  // It's for mobile when user click on navbar links for close this one 
+  // It's for mobile people when an user click on navbar links then close this one 
   const closeNav = () => {
     const menuEltToggle = document.querySelectorAll(".toggle-menu");
     if (menuEltToggle.classList !== "hidden") {
@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
 
         {/* <!-- List link navbar --> */}
-        <ul className="toggle-menu flex hidden flex-col bg-gray-50 px-1 pt-6 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-6 md:bg-transparent md:pt-0 lg:space-x-10">
+        <ul className="toggle-menu flex hidden flex-col bg-gray-50 px-1 pt-6 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-5 md:bg-transparent md:pt-0 lg:space-x-8">
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
             <NavLink
               onClick={closeNav}
@@ -62,16 +62,6 @@ const Navbar = () => {
             >
               <i className="fa-solid fa-house mr-2 md:text-white group-hover:text-gray-200"></i>
               Home
-            </NavLink>
-          </li>
-          <li className="group border-t border-gray-200 py-2 text-center md:border-0">
-            <NavLink
-              onClick={closeNav}
-              to="/servers"
-              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
-            >
-              <i className="fa-solid fa-server mr-2 md:text-white group-hover:text-gray-200"></i>
-              Servers
             </NavLink>
           </li>
           <li className="border-t border-gray-200 py-2 text-center md:border-0">
@@ -90,14 +80,14 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="group border-t border-b border-gray-200 py-2 text-center md:border-0">
-            <NavLink
-              onClick={closeNav}
-              to="/store"
-              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+            <a
+              href="https://store.awakerust.com/"
+              target="_blank"
+              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200" rel="noreferrer"
             >
               <i className="fa-solid fa-bag-shopping mr-2 md:text-white group-hover:text-gray-200"></i>
               Store
-            </NavLink>
+            </a>
           </li>
         </ul>
         {/* <!-- Btn Link Account --> */}
