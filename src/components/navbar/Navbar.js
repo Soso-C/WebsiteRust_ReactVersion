@@ -1,11 +1,13 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import logoMain from "../../assets/ressources/logo_awake/SVG/logo5.svg";
 import logoMainResponsive from "../../assets/ressources/logo_awake/SVG/logo2.svg";
 import logoMenuBurger from "../../assets/ressources/menu.svg";
 import Dropdown from "./Dropdown";
 
 const Navbar = () => {
+  // Target for switch bg navbar if we're at homepage
+  const location = useLocation();
 
   // Toggle navbar burgermenu for mobile
   const toggleNav = () => {
@@ -13,7 +15,7 @@ const Navbar = () => {
     menuEltToggle.forEach((el) => el.classList.toggle("hidden"));
   };
 
-  // It's for mobile people when an user click on navbar links then close this one 
+  // It's for mobile people when an user click on navbar links then close this one
   const closeNav = () => {
     const menuEltToggle = document.querySelectorAll(".toggle-menu");
     if (menuEltToggle.classList !== "hidden") {
@@ -22,10 +24,16 @@ const Navbar = () => {
   };
 
   return (
-    <header className="mb-8">
+    <header
+      className={`mb-11 md:mb-4 ${
+        location.pathname !== "/"
+          ? "bg-transparent"
+          : "z-[1] bg-[#232323] opacity-[0.98]"
+      }`}
+    >
       {/* <!-- Nav bar --> */}
 
-      <nav className="fixed top-0 z-20 grid w-full grid-cols-none bg-gray-50 p-4 shadow-md md:relative md:mx-auto md:h-[100px] md:max-w-7xl md:grid-cols-menu md:bg-transparent md:shadow-none">
+      <nav className="fixed top-0 z-20 grid w-full grid-cols-none bg-[#232323] p-4 shadow-md md:relative md:mx-auto md:h-[100px] md:max-w-7xl md:grid-cols-menu md:bg-transparent md:shadow-none md:p-2">
         {/* <!-- Logo --> */}
 
         <div className="flex items-center justify-between md:justify-center">
@@ -33,12 +41,7 @@ const Navbar = () => {
             <img
               src={logoMain}
               alt="logo awakeRust"
-              className="w-20 hidden md:block"
-            />
-            <img
-              src={logoMainResponsive}
-              alt="logo awakeRust"
-              className="w-16 md:hidden"
+              className="w-16 h-16 md:w-20 md:h-20"
             />
           </Link>
 
@@ -53,7 +56,7 @@ const Navbar = () => {
         </div>
 
         {/* <!-- List link navbar --> */}
-        <ul className="toggle-menu flex hidden flex-col bg-gray-50 px-1 pt-6 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-5 md:bg-transparent md:pt-0 lg:space-x-8">
+        <ul className="toggle-menu flex hidden flex-col bg-[#232323] px-1 pt-6 md:flex md:w-auto md:flex-row md:items-center md:justify-center md:space-x-5 md:bg-transparent md:pt-0 lg:space-x-8">
           <li className="group border-t border-gray-200 py-2 text-center md:border-0">
             <NavLink
               onClick={closeNav}
@@ -83,7 +86,8 @@ const Navbar = () => {
             <a
               href="https://store.awakerust.com/"
               target="_blank"
-              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200" rel="noreferrer"
+              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+              rel="noreferrer"
             >
               <i className="fa-solid fa-bag-shopping mr-2 md:text-white group-hover:text-gray-200"></i>
               Store
