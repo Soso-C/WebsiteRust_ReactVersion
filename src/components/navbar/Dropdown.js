@@ -24,15 +24,15 @@ const Dropdown = () => {
   return (
     <>
       <div className="relative inline-block text-center" ref={dropRef}>
-        <div>
+        <div className="group">
           <button
             type="button"
-            className="flex items-center font-medium text-md md:text-white md:text-base lg:text-lg"
+            className="flex items-center font-medium text-md md:text-white md:text-base lg:text-lg group-hover:text-sky-500"
             aria-expanded="true"
             aria-haspopup="true"
             onClick={toggleBtn}
           >
-            <i className="fa-solid fa-crown mr-2 md:text-white"></i>
+            <i className="fa-solid fa-crown mr-2 md:text-white group-hover:text-sky-500"></i>
             Vip
             <svg
               className="ml-2 h-5 w-5"

@@ -61,14 +61,14 @@ const Navbar = () => {
             <NavLink
               onClick={closeNav}
               to="/"
-              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+              className="text-lg md:text-base lg:text-lg font-medium text-white group-hover:text-sky-500"
             >
-              <i className="fa-solid fa-house mr-2 md:text-white group-hover:text-gray-200"></i>
+              <i className="fa-solid fa-house mr-2 text-white group-hover:text-sky-500"></i>
               Home
             </NavLink>
           </li>
-          <li className="border-t border-gray-200 py-2 text-center md:border-0">
-            <span className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200">
+          <li className="group border-t border-gray-200 py-2 text-center md:border-0">
+            <span className="text-lg md:text-base lg:text-lg font-medium text-white group-hover:text-sky-500">
               <Dropdown />
             </span>
           </li>
@@ -76,9 +76,9 @@ const Navbar = () => {
             <NavLink
               onClick={closeNav}
               to="/ranks"
-              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+              className="text-lg md:text-base lg:text-lg font-medium text-white group-hover:text-sky-500"
             >
-              <i className="fa-solid fa-star md:text-white group-hover:text-gray-200"></i>{" "}
+              <i className="fa-solid fa-star text-white group-hover:text-sky-500"></i>{" "}
               Ranks
             </NavLink>
           </li>
@@ -86,10 +86,10 @@ const Navbar = () => {
             <a
               href="https://store.awakerust.com/"
               target="_blank"
-              className="text-lg md:text-base lg:text-lg font-medium md:text-white group-hover:text-gray-200"
+              className="text-lg md:text-base lg:text-lg font-medium text-white group-hover:text-sky-500"
               rel="noreferrer"
             >
-              <i className="fa-solid fa-bag-shopping mr-2 md:text-white group-hover:text-gray-200"></i>
+              <i className="fa-solid fa-bag-shopping mr-2 text-white group-hover:text-sky-500"></i>
               Store
             </a>
           </li>
@@ -98,7 +98,7 @@ const Navbar = () => {
         <div className="toggle-menu mt-6 flex hidden items-center justify-center md:mt-0 md:flex md:justify-end">
           <Link
             to="/"
-            className="w-36 rounded-md border bg-white px-4 py-2 text-center font-medium text-indigo-600 shadow-md hover:bg-gray-50"
+            className="w-36 rounded-md border bg-white px-4 py-2 text-center font-medium text-indigo-600 shadow-md hover:bg-gray-300"
           >
             Links account
           </Link>

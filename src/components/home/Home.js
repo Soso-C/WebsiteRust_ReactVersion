@@ -54,12 +54,12 @@ const Home = () => {
             Join us
           </p>
           <div className="flex justify-center items-center py-4">
-            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white rounded-md shadow-lg text-white font-medium hover:bg-gray-300">
+            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white rounded-md opacity-[0.98] shadow-lg text-white font-medium hover:bg-gray-300">
               Discord
-              <i className="fa-brands fa-discord fa-xl ml-2 text-white"></i>
+              <i className="fa-brands fa-discord fa-xl ml-2 text-[#5865F2]"></i>
             </button>
-            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white ml-4 rounded-md shadow-lg text-white font-medium hover:bg-gray-300">
-              Steam<i className="fa-brands fa-steam fa-xl ml-2 text-white"></i>
+            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white ml-4 rounded-md opacity-[0.98] shadow-lg text-white font-medium hover:bg-gray-300">
+              Steam<i className="fa-brands fa-steam fa-xl ml-2 text-[#0F6D9E]"></i>
             </button>
           </div>
         </div>
