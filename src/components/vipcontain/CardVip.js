@@ -16,28 +16,28 @@ const CardVip = ({ vip, paramid }) => {
 
   return (
     <>
-      <div className="flex flex-col max-w-[310px] sm:max-w-[300px] hover:scale-105 transition duration-300 ease-out ring-2 ring-white rounded-xl">
+      <div className="flex flex-col max-w-[310px] sm:max-w-[280px] hover:scale-105 transition duration-300 ease-out ring-2 ring-white rounded-xl">
         <div className={`card${vip.id} rounded-t-xl`}>
           <h3 className="font-hurricane text-white text-4xl font-bold">
             {vip.title}
           </h3>
         </div>
-        <div className="text-white bgCardFooter rounded-b-lg h-[180px]">
-          <h4 className="text-xl text-center font-bold pt-4 pb-4 text-black">
+        <div className="text-white bgCardFooter rounded-b-lg h-[150px]">
+          <h4 className="text-xl text-center font-bold pt-[8px] pb-[5px] text-black">
             {vip.price}€
           </h4>
           <p className="text-center px-4 font-medium text-sky-800">
             {`${vip.phrase} of access !`}
           </p>
-          <div className="flex justify-between pt-1 p-3">
+          <div className="mt-4 flex justify-between pb-2 px-2">
             <button
-              className="mt-4 p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200"
+              className="p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200"
               id="open"
               onClick={displayModal}
             >
               More...
             </button>
-            <button className="mt-4 p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200">
+            <button className="p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200">
               <a
                 href="https://store.awakerust.com/category/eu-x10-main"
                 target="_blank"

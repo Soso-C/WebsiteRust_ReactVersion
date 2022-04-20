@@ -94,10 +94,10 @@ const Navbar = () => {
           </li>
         </ul>
         {/* <!-- Btn Link Account --> */}
-        <div className="toggle-menu mt-6 flex hidden items-center justify-center md:mt-0 md:flex md:justify-end">
+        <div className="toggle-menu mt-6 flex hidden items-center justify-center md:mt-0 md:flex">
           <Link
             to="/"
-            className="w-36 rounded-md border bg-white px-4 py-2 text-center font-medium text-sky-700 shadow-md hover:bg-gray-300"
+            className="px-[12px] py-[6px] rounded-md border bg-white text-center font-medium text-sky-700 shadow-md hover:bg-gray-300"
           >
             Links account
           </Link>

@@ -2,8 +2,8 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
 const ModalVip = ({ vip, toggle, paramid }) => {
-  // Si mon parametre id = a x10 et que mon vip.id < 6 car 7-8-9 sont des kits alors on affiche les ressources etc ...
-  if ((paramid.id === "x10") & (vip.id < 6)) {
+  // Si dailykit existe alors : (tous les vip ont un dailykit mais les kits pvp, pvp+, etc en ont pas dans l'object)
+  if (vip.dailyKit) {
     return (
       <>
         <div id="overlay" onClick={toggle}></div>
@@ -92,7 +92,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
       </>
     );
   }
-  // Si c'est un kit ou un servx2 alors
+  // Sinon c'est un kit ou un servx2 alors
   else {
     return (
       <>

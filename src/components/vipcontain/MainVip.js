@@ -10,7 +10,7 @@ const MainVip = () => {
 
   if (params.id === "x2") {
     return (
-      <main className="mx-auto max-w-[1400px] mt-16 mb-10 md:my-auto lg:mt-0 xl:mt-0">
+      <main className="mx-auto max-w-7xl mt-16 mb-10 md:my-auto lg:mt-0 xl:mt-0">
         <h1 className="gradH1 px-4 pt-4 text-center font-roboto text-3xl font-bold text-white md:px-0 md:pt-8 md:text-4xl">
           EU {params.id} VIP
         </h1>
@@ -25,7 +25,7 @@ const MainVip = () => {
     );
   } else if (params.id === "x10") {
     return (
-      <main className="mx-auto max-w-[1400px] mt-16 mb-10 md:my-auto lg:mt-0 xl:mt-0">
+      <main className="mx-auto max-w-7xl mt-16 mb-10 md:my-auto lg:mt-0 xl:mt-0">
         <h1 className="gradH1 px-4 pt-4 text-center font-roboto text-3xl font-bold text-white md:px-0 md:pt-8 md:text-4xl">
           EU {params.id} VIP
         </h1>
