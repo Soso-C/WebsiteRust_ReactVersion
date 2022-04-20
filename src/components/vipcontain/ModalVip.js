@@ -74,7 +74,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
               className="absolute top-1 right-1 text-center rounded-xl p-2 text-red-900 font-bold text-3xl"
               onClick={toggle}
             >
-              X
+              <span className="hover:text-gray-500">X</span>
             </button>
           </div>
           <div className="flex justify-center">
@@ -131,7 +131,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
               className="absolute top-1 right-1 text-center rounded-xl p-2 text-red-900 font-bold text-3xl"
               onClick={toggle}
             >
-              X
+              <span className="hover:text-gray-500">X</span>
             </button>
           </div>
           <div className="flex justify-center">

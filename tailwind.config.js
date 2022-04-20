@@ -10,6 +10,9 @@ module.exports = {
         hurricane: ["Hurricane", "cursive"],
         roboto: ["Roboto", "sans-serif"],
       },
+      backgroundImage: {
+        'main-bg': "url('/public/AwakeRustBackground.webp')",
+      },
     },
   },
   plugins: [],

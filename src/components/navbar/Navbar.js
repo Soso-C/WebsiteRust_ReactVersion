@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import logoMain from "../../assets/ressources/logo_awake/SVG/logo5.svg";
-import logoMainResponsive from "../../assets/ressources/logo_awake/SVG/logo2.svg";
 import logoMenuBurger from "../../assets/ressources/menu.svg";
 import Dropdown from "./Dropdown";
 
@@ -98,7 +97,7 @@ const Navbar = () => {
         <div className="toggle-menu mt-6 flex hidden items-center justify-center md:mt-0 md:flex md:justify-end">
           <Link
             to="/"
-            className="w-36 rounded-md border bg-white px-4 py-2 text-center font-medium text-indigo-600 shadow-md hover:bg-gray-300"
+            className="w-36 rounded-md border bg-white px-4 py-2 text-center font-medium text-sky-700 shadow-md hover:bg-gray-300"
           >
             Links account
           </Link>
