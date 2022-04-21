@@ -9,7 +9,6 @@ import Home from "./components/home/Home";
 import VipPage from "./components/vipcontain/VipPage";
 import Servers from "./components/servers/Servers";
 import Ranks from "./components/ranks/Ranks";
-import Store from "./components/store/Store";
 
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
 
         <Route path="/servers" element={<Servers />} />
         <Route path="/ranks" element={<Ranks />} />
-        <Route path="/store" element={<Store />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
