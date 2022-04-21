@@ -4,6 +4,7 @@ export const vipx10 =
     "id": 1,
     "title": "VIP",
     "price": 7.25,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "ressources": {
       "wood": 60000,
@@ -43,6 +44,7 @@ export const vipx10 =
     "id": 2,
     "title": "HERO",
     "price": 16,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "ressources": {
       "wood": 130000,
@@ -85,6 +87,7 @@ export const vipx10 =
     "id": 3,
     "title": "ELITE",
     "price": 26,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "ressources": {
       "wood": 190000,
@@ -128,6 +131,7 @@ export const vipx10 =
     "id": 4,
     "title": "MASTER",
     "price": 36,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "ressources": {
       "wood": 250000,
@@ -173,6 +177,7 @@ export const vipx10 =
     "id": 5,
     "title": "MVP",
     "price": 50,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "ressources": {
       "wood": 450000,
@@ -218,6 +223,7 @@ export const vipx10 =
     "id": 6,
     "title": "PVP",
     "price": 9.99,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "globalKit": [
       "1 HOUR KIT COOLDOWN",
@@ -235,6 +241,7 @@ export const vipx10 =
     "id": 7,
     "title": "PVP +",
     "price": 14.99,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "globalKit": [
       "1 HOUR KIT COOLDOWN",
@@ -243,7 +250,7 @@ export const vipx10 =
       "1 Weapon Lasersight + Holosight",
       "1 L96 Rifle",
       "1 8x Scope",
-      "2 256 Rifle Ammo",
+      "2x 256 Rifle Ammo",
       "12 Blueberries",
       "10 Medical Syringes",
       "5 Medical Kits",
@@ -255,6 +262,7 @@ export const vipx10 =
     "id": 8,
     "title": "AIRDROP",
     "price": 24.99,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "You can redeem 10 Airdrops once per wipe for 30 days",
     "globalKit": ["10 Supply AirDrop once per wipe for 30 days"]
   },
@@ -262,6 +270,7 @@ export const vipx10 =
     "id": 9,
     "title": "SKINBOX",
     "price": 5.99,
+    "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
     "globalKit": ["Access to skinbox | /skin for 30 days"]
   }

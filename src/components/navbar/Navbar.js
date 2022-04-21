@@ -100,6 +100,7 @@ const Navbar = () => {
             className="px-[12px] py-[6px] rounded-md border bg-white text-center font-medium text-sky-700 shadow-md hover:bg-gray-300"
           >
             Links account
+            <i class="fa-solid fa-link ml-1"></i>
           </Link>
         </div>
       </nav>

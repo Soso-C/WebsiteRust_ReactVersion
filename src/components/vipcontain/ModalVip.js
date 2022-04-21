@@ -79,11 +79,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
           </div>
           <div className="flex justify-center">
             <button className="mt-4 text-center ml-4 p-2 w-36 rounded-md bg-blue-500 text-white font-bold hover:bg-blue-300">
-              <a
-                href="https://store.awakerust.com/category/eu-x10-main"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={vip.shopLinkUrl} target="_blank" rel="noreferrer">
                 Buy {vip.price}€
               </a>
             </button>
@@ -136,7 +132,9 @@ const ModalVip = ({ vip, toggle, paramid }) => {
           </div>
           <div className="flex justify-center">
             <button className="mt-4 text-center ml-4 p-2 w-36 rounded-md bg-blue-500 text-white font-bold hover:bg-blue-300">
-              Buy {vip.price}€
+              <a href={vip.shopLinkUrl} target="_blank" rel="noreferrer">
+                Buy {vip.price}€
+              </a>
             </button>
           </div>
         </div>

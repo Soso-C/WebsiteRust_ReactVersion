@@ -16,7 +16,7 @@ const CardVip = ({ vip, paramid }) => {
 
   return (
     <>
-      <div className="flex flex-col max-w-[310px] sm:max-w-[280px] hover:scale-105 transition duration-300 ease-out ring-2 ring-white rounded-xl">
+      <div className="flex flex-col mb-3 sm:mb-0 max-w-[310px] sm:max-w-[280px] hover:scale-105 transition duration-300 ease-out ring-2 ring-white rounded-xl">
         <div className={`card${vip.id} rounded-t-xl`}>
           <h3 className="font-hurricane text-white text-4xl font-bold">
             {vip.title}
@@ -39,7 +39,7 @@ const CardVip = ({ vip, paramid }) => {
             </button>
             <button className="p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200">
               <a
-                href="https://store.awakerust.com/category/eu-x10-main"
+                href={vip.shopLinkUrl}
                 target="_blank"
                 rel="noreferrer"
               >
