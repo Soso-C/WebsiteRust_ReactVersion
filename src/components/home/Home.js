@@ -9,9 +9,11 @@ const Home = () => {
   // get Data x10
   const getData = async () => {
     await axios
-      .get(process.env.REACT_APP_GET_SERVERX2_INFO)
+      .get("https://api.battlemetrics.com/servers/14668224")
       .then((res) => setServerx10(res.data.data.attributes));
   };
+
+  // get Data x2
 
   useEffect(() => {
     getData();

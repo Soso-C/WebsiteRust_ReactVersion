@@ -88,7 +88,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
       </>
     );
   }
-  // Sinon c'est un kit ou un servx2 alors
+  // Sinon c'est soit un kit ou un servx2 alors :
   else {
     return (
       <>
