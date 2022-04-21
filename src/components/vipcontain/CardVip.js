@@ -31,7 +31,7 @@ const CardVip = ({ vip, paramid }) => {
           </p>
           <div className="mt-4 flex justify-between pb-2 px-2">
             <button
-              className="p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200"
+              className="p-2 flex items-center max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200"
               id="open"
               onClick={displayModal}
             >
@@ -43,7 +43,7 @@ const CardVip = ({ vip, paramid }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Buy Vip ⭐
+                Buy Vip <i class="fa-solid fa-star text-yellow-400"></i>
               </a>
             </button>
           </div>

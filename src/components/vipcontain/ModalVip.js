@@ -41,7 +41,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
                   <li key={uuidv4()} className="flex items-start lg:col-span-1">
                     <div className="flex-shrink-0"></div>
                     <p className="ml-3 text-base sm:text-sm leading-5 text-gray-700 dark:text-gray-200">
-                      ✔️{" "}
+                    <i className="fa-solid fa-check text-green-600"></i>{" "}
                       {`${el} ${kname.charAt(0).toUpperCase()}${kname.slice(
                         1
                       )}`}
@@ -64,7 +64,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
                   <li key={uuidv4()} className="flex items-start lg:col-span-1">
                     <div className="flex-shrink-0"></div>
                     <p className="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
-                      {`✔️ ${daily}`}
+                    <i className="fa-solid fa-check text-green-600"></i> {daily}
                     </p>
                   </li>
                 ))}
@@ -117,7 +117,7 @@ const ModalVip = ({ vip, toggle, paramid }) => {
                   <li key={uuidv4()} className="flex items-start lg:col-span-1">
                     <div className="flex-shrink-0"></div>
                     <p className="ml-3 text-sm leading-5 text-gray-700 dark:text-gray-200">
-                      ✔️ {para}
+                    <i className="fa-solid fa-check text-green-600"></i> {para}
                     </p>
                   </li>
                 ))}
