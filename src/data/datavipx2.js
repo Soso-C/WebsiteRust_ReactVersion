@@ -5,6 +5,7 @@ export const vipx2 = [
     price: 4.99,
     phrase: "Purchasing this product will give you 7 days",
     globalKit: ["Queu pass for 7 days"],
+    bgName: "weekly"
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ export const vipx2 = [
     price: 7.99,
     phrase: "Purchasing this product will give you 30 days",
     globalKit: ["Queu pass for 30 days"],
+    bgName: "qSkip"
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const vipx2 = [
       "Access to skinbox | /skin for 30 days",
       "Furnace spliter",
     ],
+    bgName: "vip"
   },
   {
     id: 4,
@@ -30,5 +33,6 @@ export const vipx2 = [
     price: 4.99,
     phrase: "Purchasing this product will give you 30 days",
     globalKit: ["Access to skinbox | /skin for 30 days"],
+    bgName: "skinbox"
   },
 ];

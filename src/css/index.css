@@ -20,15 +20,7 @@ body,
 
 /************************************************************* Card *****************************************************/
 
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6,
-.card7,
-.card8,
-.card9 {
+.card {
   height: 170px;
   width: 100%;
   max-width: 350px;
@@ -38,71 +30,50 @@ body,
   justify-content: center;
 }
 
-.card1 {
-  background-image: radial-gradient(
-    circle farthest-corner at 12.3% 19.3%,
-    rgba(85, 88, 218, 1) 0%,
-    rgba(95, 209, 249, 1) 100.2%
-  );
+.vip-bg {
+  background: url("/src/assets/ressources/CARD/Vip.jpg") no-repeat center
+    center/cover;
+}
+.elite-bg {
+  background: url("/src/assets/ressources/CARD/Elite.jpg") no-repeat center
+    center/cover;
+}
+.hero-bg {
+  background: url("/src/assets/ressources/CARD/hero.jpg") no-repeat center
+    center/cover;
+}
+.master-bg {
+  background: url("/src/assets/ressources/CARD/Master.jpg") no-repeat center
+    center/cover;
+}
+.mvp-bg {
+  background: url("/src/assets/ressources/CARD/MVP.jpg") no-repeat center
+    center/cover;
+}
+.pvp-bg {
+  background: url("/src/assets/ressources/CARD/Pvp.jpg") no-repeat center
+    center/cover;
+}
+.pvp2-bg {
+  background: url("/src/assets/ressources/CARD/Pvp+.jpg") no-repeat center
+    center/cover;
+}
+.airdrop-bg {
+  background: url("/src/assets/ressources/CARD/Airdrop.jpg") no-repeat center
+    center/cover;
+}
+.skinbox-bg {
+  background: url("/src/assets/ressources/CARD/Skinbox.jpg") no-repeat center
+    center/cover;
 }
 
-.card2 {
-  background-image: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    rgba(90, 92, 106, 1) 0%,
-    rgba(32, 45, 58, 1) 81.3%
-  );
+.qSkip-bg {
+  background: url("/src/assets/ressources/CARD/Queue-skip.jpg") no-repeat center
+    center/cover;
 }
-
-.card3 {
-  background-image: radial-gradient(
-    circle farthest-corner at 1.3% 2.8%,
-    rgba(239, 249, 249, 1) 0%,
-    rgba(182, 199, 226, 1) 100.2%
-  );
-}
-
-.card4 {
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
-}
-
-.card5 {
-  background-image: linear-gradient(
-    68.3deg,
-    rgba(245, 177, 97, 1) 0.4%,
-    rgba(236, 54, 110, 1) 100.2%
-  );
-}
-
-.card6 {
-  background-image: linear-gradient(
-    99deg,
-    rgba(115, 18, 81, 1) 10.6%,
-    rgba(28, 28, 28, 1) 118%
-  );
-}
-.card7 {
-  background-image: linear-gradient(
-    109.6deg,
-    rgba(170, 255, 169, 1) 11.2%,
-    rgba(17, 255, 189, 1) 91.1%
-  );
-}
-
-.card8 {
-  background-image: linear-gradient(
-    111.6deg,
-    rgba(174, 68, 223, 1) 27.3%,
-    rgba(246, 135, 135, 1) 112.7%
-  );
-}
-
-.card9 {
-  background-image: linear-gradient(
-    68.4deg,
-    rgba(99, 251, 215, 1) -0.4%,
-    rgba(5, 222, 250, 1) 100.2%
-  );
+.weekly-bg {
+  background: url("/src/assets/ressources/CARD/Weekly_pass.jpg") no-repeat
+    center center/cover;
 }
 
 /*************************************************************************** Background *************************************************************************************/
@@ -236,12 +207,15 @@ body,
   -webkit-text-fill-color: transparent;
 }
 
+/********************************** Modal ************************************************/
+
 #overlay {
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
   height: 100vh;
   width: 100vw;
+  z-index: 100;
 }
 #modal {
   max-width: 1400px;
@@ -257,21 +231,6 @@ body,
 }
 
 
-@media screen and (max-width: 767px) {
-  .active {
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-}
-
-.imageOverlay {
-  background: black;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
 /**************************** Animation CSS *****************************************/
 
 #modal {
@@ -279,14 +238,12 @@ body,
 }
 
 @keyframes apparition {
-  from{
+  from {
     opacity: 0;
     top: 10%;
   }
-  to{
+  to {
     opacity: 1;
-    top: 50%; 
+    top: 50%;
   }
 }
-
-

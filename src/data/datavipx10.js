@@ -38,7 +38,8 @@ export const vipx10 =
       "Bed cooldown (80s) - Bag cooldown (90s)",
       "8 RP per hour",
       "Access to skinbox | /skin"
-    ]
+    ],
+    bgName: "vip"
   },
   {
     "id": 2,
@@ -81,7 +82,8 @@ export const vipx10 =
       "10 RP per hour",
       "BGrade levels | 1 - 2",
       "Access to skinbox | /skin"
-    ]
+    ],
+    bgName: "hero"
   },
   {
     "id": 3,
@@ -125,7 +127,8 @@ export const vipx10 =
       "12 RP per hour",
       "BGrade levels | 1 - 3",
       "Access to skinbox | /skin"
-    ]
+    ],
+    bgName: "elite"
   },
   {
     "id": 4,
@@ -171,7 +174,8 @@ export const vipx10 =
       "BGrade (Access to all levels of building instant upgrade)",
       "14 RP per hour",
       "Access to skinbox | /skin"
-    ]
+    ],
+    bgName: "master"
   },
   {
     "id": 5,
@@ -217,7 +221,8 @@ export const vipx10 =
       "20 RP per hour",
       "BGrade (Access to all levels of building instant upgrade)",
       "Access to skinbox | /skin"
-    ]
+    ],
+    bgName: "mvp"
   },
   {
     "id": 6,
@@ -235,7 +240,8 @@ export const vipx10 =
       "4 Medical Kits",
       "2 High External Stone Walls",
       "Full Metal Gearset + Tactical Gloves"
-    ]
+    ],
+    bgName: "pvp"
   },
   {
     "id": 7,
@@ -256,7 +262,8 @@ export const vipx10 =
       "5 Medical Kits",
       "4 High External Stone Walls",
       "Full Metal Gearset + Tactical Gloves"
-    ]
+    ],
+    bgName: "pvp2"
   },
   {
     "id": 8,
@@ -264,7 +271,8 @@ export const vipx10 =
     "price": 24.99,
     "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "You can redeem 10 Airdrops once per wipe for 30 days",
-    "globalKit": ["10 Supply AirDrop once per wipe for 30 days"]
+    "globalKit": ["10 Supply AirDrop once per wipe for 30 days"],
+    bgName: "airdrop"
   },
   {
     "id": 9,
@@ -272,6 +280,7 @@ export const vipx10 =
     "price": 5.99,
     "shopLinkUrl": "https://store.awakerust.com/category/eu-x10-main",
     "phrase": "Purchasing this product will give you 30 days",
-    "globalKit": ["Access to skinbox | /skin for 30 days"]
+    "globalKit": ["Access to skinbox | /skin for 30 days"],
+    bgName: "skinbox"
   }
 ]
