@@ -23,7 +23,7 @@ const Home = () => {
     <section className="h-full w-full">
       {/* Button bottom page server info/connect  */}
 
-      <div className="flex p-1 md:mt-20 items-center justify-center gap-5 w-full absolute bottom-[10px]">
+      <div className="flex p-1 md:mt-20 items-center justify-center space-x-4 md:space-x-8 w-full z-50 absolute bottom-[10px]">
         <div className="w-1/2 sm:w-[300px] h-full p-3 bg-[#232323] rounded-lg items-center flex flex-col justify-center shadow-lg opacity-[0.95] ring-white ring-1">
           <p className="text-center font-extrabold text-slate-400">
             Awake EU x2

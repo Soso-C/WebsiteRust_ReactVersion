@@ -38,13 +38,12 @@ const MainVip = () => {
         </div>
       </main>
     );
-  } else {
-    return (
-      <>
-        <Navigate to="/" />
-      </>
-    );
   }
+  return (
+    <>
+      <Navigate to="/" />
+    </>
+  );
 };
 
 export default MainVip;

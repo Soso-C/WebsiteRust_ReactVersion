@@ -7,7 +7,11 @@ import Dropdown from "./Dropdown";
 const Navbar = () => {
   // Target for switch bg navbar if we're at homepage
   const location = useLocation();
-
+  // Change bg navbar about page location
+  const bgNavLocation =
+    location.pathname !== "/"
+      ? "bg-transparent"
+      : "z-[1] bg-[#232323] opacity-[0.98]";
   const [toggle, setToggle] = useState(false);
 
   const showNav = () => {
@@ -15,13 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <header
-      className={`mb-11 md:mb-4 ${
-        location.pathname !== "/"
-          ? "bg-transparent"
-          : "z-[1] bg-[#232323] opacity-[0.98]"
-      }`}
-    >
+    <header className={`mb-11 md:mb-4 ${bgNavLocation}`}>
       {/* <!-- Nav bar --> */}
 
       <nav className="fixed top-0 z-20 grid w-full grid-cols-none bg-[#232323] p-4 shadow-md md:relative md:mx-auto md:h-[100px] md:max-w-7xl md:grid-cols-menu md:bg-transparent md:shadow-none md:p-2">
