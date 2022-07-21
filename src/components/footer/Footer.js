@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { a } from "react-router-dom";
 import logoFooter from "../../assets/ressources/logo_awake/SVG/logo1.svg";
 
 const Footer = () => {
@@ -17,31 +17,37 @@ const Footer = () => {
         <div className="flex w-1/2 justify-center sm:flex-none sm:self-center">
           <ul className="flex flex-col justify-center sm:flex-row">
             <li className="px-4 py-2 font-medium">
-              <Link
-                to="/"
+              <a
+                href="https://discord.gg/vZDAZpzHTC"
+                target={"_blank"}
                 className="flex items-center md:text-lg md:hover:text-white"
+                rel="noreferrer"
               >
                 <i className="fa-brands fa-discord fa-xl mr-2 text-[#5865F2]"></i>
                 Discord
-              </Link>
+              </a>
             </li>
             <li className="px-4 py-2 font-medium">
-              <Link
-                to="/"
+              <a
+                href="https://steamcommunity.com/groups/awakerust"
+                target={"_blank"}
                 className="flex items-center md:text-lg md:hover:text-white"
+                rel="noreferrer"
               >
                 <i className="fa-brands fa-twitter fa-xl mr-2 text-[#1DA1F2]"></i>
                 Twitter
-              </Link>
+              </a>
             </li>
             <li className="px-4 py-2 font-medium">
-              <Link
-                to=""
+              <a
+                href="https://steamcommunity.com/groups/awakerust"
+                target={"_blank"}
                 className="flex items-center md:text-lg md:hover:text-white"
+                rel="noreferrer"
               >
                 <i className="fa-brands fa-steam fa-xl mr-2 text-black"></i>
                 Steam
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

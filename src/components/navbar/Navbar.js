@@ -12,6 +12,7 @@ const Navbar = () => {
     location.pathname !== "/"
       ? "bg-transparent"
       : "z-[1] bg-[#232323] opacity-[0.98]";
+
   const [toggle, setToggle] = useState(false);
 
   const showNav = () => {
@@ -93,13 +94,15 @@ const Navbar = () => {
             toggle ? " flex" : " hidden"
           } mt-6 items-center justify-center md:mt-0 md:flex`}
         >
-          <Link
-            to="/"
-            className="px-[12px] py-[6px] rounded-md border bg-white text-center font-medium text-sky-700 shadow-md hover:bg-gray-300"
+          <a
+            href="https://link.awakerust.com/"
+            target={"_blank"}
+            className="px-[12px] py-[6px] rounded-md border bg-white text-center font-medium text-sky-700 shadow-md hover:opacity-75"
+            rel="noreferrer"
           >
             Links account
-            <i class="fa-solid fa-link ml-1"></i>
-          </Link>
+            <i className="fa-solid fa-link ml-1"></i>
+          </a>
         </div>
       </nav>
     </header>

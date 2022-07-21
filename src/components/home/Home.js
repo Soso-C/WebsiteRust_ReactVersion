@@ -1,22 +1,19 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { getServerx10, getServerx2 } from "../../api/server";
 import ImageBackground from "../imageBackground/ImageBackground";
 
 const Home = () => {
   const [serverx10, setServerx10] = useState([]);
   const [serverx2, setServerx2] = useState([]);
 
-  // get Data x10
-  const getData = async () => {
-    await axios
-      .get("https://api.battlemetrics.com/servers/14668224")
-      .then((res) => setServerx10(res.data.data.attributes));
-  };
-
-  // get Data x2
-
   useEffect(() => {
-    getData();
+    getServerx2()
+      .then((res) => setServerx2(res))
+      .catch((err) => console.log(err));
+
+    getServerx10()
+      .then((res) => setServerx10(res))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -28,8 +25,8 @@ const Home = () => {
           <p className="text-center font-extrabold text-slate-400">
             Awake EU x2
           </p>
-          <p className="text-center font-bold text-white pb-2">{`${serverx10.players} / ${serverx10.maxPlayers}`}</p>
-          <button className="px-4 bg-[#141414] py-1 md:w-36 ring-1 ring-white rounded-md shadow-lg text-white font-medium hover:bg-gray-300">
+          <p className="text-center font-bold text-white pb-2">{`${serverx2.players} / ${serverx2.maxPlayers}`}</p>
+          <button className="px-4 bg-[#141414] py-1 md:w-36 ring-1 ring-white rounded-md shadow-lg text-white font-medium hover:opacity-75">
             Connect
           </button>
         </div>
@@ -38,7 +35,7 @@ const Home = () => {
             Awake EU x10
           </p>
           <p className="text-center font-bold text-white pb-2">{`${serverx10.players} / ${serverx10.maxPlayers}`}</p>
-          <button className="px-4 bg-[#141414] py-1 ring-1 md:w-36 ring-white rounded-md shadow-lg text-white font-medium hover:bg-gray-300">
+          <button className="px-4 bg-[#141414] py-1 ring-1 md:w-36 ring-white rounded-md shadow-lg text-white font-medium hover:opacity-75">
             Connect
           </button>
         </div>
@@ -56,12 +53,25 @@ const Home = () => {
             Join us
           </p>
           <div className="flex justify-center items-center py-4">
-            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white rounded-md opacity-[0.98] shadow-lg text-white font-medium hover:bg-gray-300">
-              Discord
-              <i className="fa-brands fa-discord fa-xl ml-2 text-[#5865F2]"></i>
+            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white rounded-md opacity-[0.98] shadow-lg text-white font-medium hover:opacity-80">
+              <a
+                href="https://discord.gg/vZDAZpzHTC"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Discord
+                <i className="fa-brands fa-discord fa-xl ml-2 text-[#5865F2]"></i>
+              </a>
             </button>
-            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white ml-4 rounded-md opacity-[0.98] shadow-lg text-white font-medium hover:bg-gray-300">
-              Steam<i className="fa-brands fa-steam fa-xl ml-2 text-[#0F6D9E]"></i>
+            <button className="px-4 bg-[#232323] py-2 w-36 ring-1 ring-white ml-4 rounded-md opacity-[0.98] shadow-lg text-white font-medium hover:opacity-80">
+              <a
+                href="https://steamcommunity.com/groups/awakerust"
+                target={"_blank"}
+                rel="noreferrer"
+              >
+                Steam
+                <i className="fa-brands fa-steam fa-xl ml-2 text-[#0F6D9E]"></i>
+              </a>
             </button>
           </div>
         </div>

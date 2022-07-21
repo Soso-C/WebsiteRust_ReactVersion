@@ -39,7 +39,7 @@ const CardVip = ({ vip, paramid }) => {
             </button>
             <button className="p-2 max-w-[125px] rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-200">
               <a href={vip.shopLinkUrl} target="_blank" rel="noreferrer">
-                Buy Vip <i class="fa-solid fa-star text-yellow-400"></i>
+                Buy Vip <i className="fa-solid fa-star text-yellow-400"></i>
               </a>
             </button>
           </div>
